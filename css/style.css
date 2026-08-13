@@ -54,7 +54,7 @@ body {
 }
 
 .navbar ul {
-    list-style: none;
+    list-style: flex;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
