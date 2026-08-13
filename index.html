@@ -23,12 +23,12 @@
                 <h1>Iyunga Secondary School</h1>
                 <p>Education for Better Future</p>
                 <p id="datetime"></p>
+
 <script>
 function updateDateTime() {
     const now = new Date();
 
     const date = now.toLocaleDateString('en-US', {
-        timeZone: 'Africa/Dar_es_Salaam',
         weekday: 'long',
         year: 'numeric',
         month: 'long',
@@ -36,11 +36,9 @@ function updateDateTime() {
     });
 
     const time = now.toLocaleTimeString('en-US', {
-        timeZone: 'Africa/Dar_es_Salaam',
         hour: '2-digit',
         minute: '2-digit',
-        second: '2-digit',
-        hour12: false
+        second: '2-digit'
     });
 
     document.getElementById("datetime").textContent =
@@ -50,6 +48,7 @@ function updateDateTime() {
 updateDateTime();
 setInterval(updateDateTime, 1000);
 </script>
+             
             </div>
         </div>
     </header>
