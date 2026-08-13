@@ -22,6 +22,20 @@
             <div>
                 <h1>Iyunga Secondary School</h1>
                 <p>Education for Better Future</p>
+                <p id="date"></p>
+<script>
+    const today = new Date();
+
+    const options = {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    };
+
+    document.getElementById("date").textContent =
+        today.toLocaleDateString('en-US', options);
+</script>
             </div>
         </div>
     </header>
