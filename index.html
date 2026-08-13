@@ -23,18 +23,30 @@
                 <h1>Iyunga Secondary School</h1>
                 <p>Education for Better Future</p>
                 <p id="datetime"></p>
-<script>
-    const today = new Date();
 
-    const options = {
+<script>
+function updateDateTime() {
+    const now = new Date();
+
+    const date = now.toLocaleDateString('en-US', {
         weekday: 'long',
         year: 'numeric',
         month: 'long',
         day: 'numeric'
-    };
+    });
 
-    document.getElementById("date").textContent =
-        today.toLocaleDateString('en-US', options);
+    const time = now.toLocaleTimeString('en-US', {
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+    });
+
+    document.getElementById("datetime").textContent =
+        date + " | " + time;
+}
+
+updateDateTime();
+setInterval(updateDateTime, 1000);
 </script>
             </div>
         </div>
