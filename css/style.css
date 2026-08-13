@@ -272,8 +272,13 @@ footer {
 /* MOBILE MENU */
 
 .menu-toggle {
-    display: none;
-    color: white;
-    font-size: 28px;
-    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 15px;
+}
+
+}  
    
