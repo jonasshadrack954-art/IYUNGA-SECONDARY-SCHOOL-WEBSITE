@@ -377,52 +377,5 @@ footer {
         background: #f59e0b;
         color: #111 !important;
     }
-    /* MENU BUTTON - hidden on computer */
-.menu-toggle {
-    display: none;
-    background: #022c22;
-    color: white;
-    border: none;
-    font-size: 32px;
-    padding: 10px 15px;
-    cursor: pointer;
-}
-
-/* PHONE */
-@media screen and (max-width: 600px) {
-
-    .menu-toggle {
-        display: block;
-        margin: 10px auto;
-    }
-
-    .navbar {
-        display: none;
-        width: 100%;
-        padding: 0;
-    }
-
-    .navbar.active {
-        display: block;
-    }
-
-    .navbar ul {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-    }
-
-    .navbar li {
-        width: 100%;
-        text-align: center;
-    }
-
-    .navbar li a {
-        display: block;
-        width: 100%;
-        padding: 12px;
-    }
-}
+   
 }
