@@ -54,7 +54,7 @@ body {
 }
 
 .navbar ul {
-    list-style: flex;
+    list-style: none;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -268,66 +268,113 @@ footer {
     padding: 20px;
 }
 
+/* ================================
+   RESPONSIVE NAVIGATION
+================================ */
 
-/* MOBILE MENU */
-
-.menu-toggle {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px;
-    margin-top: 15px;
+/* DESKTOP */
+.navbar {
+    background: #022c22;
+    padding: 0 8%;
+    width: 100%;
 }
-/* NAVIGATION */
-nav {
+
+.navbar ul {
+    list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 8px;
     width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-nav a {
+.navbar li {
+    display: block;
+}
+
+.navbar li a {
+    display: block;
     color: white;
     text-decoration: none;
-    padding: 10px 12px;
+    padding: 16px 12px;
     font-size: 16px;
-    display: inline-block;
     white-space: nowrap;
+    transition: 0.3s;
 }
 
-/* TABLET */
-@media (max-width: 900px) {
-    nav {
-        gap: 5px;
-    }
-
-    nav a {
-        font-size: 15px;
-        padding: 8px 9px;
-    }
+.navbar li a:hover,
+.navbar li a.active {
+    background: #f59e0b;
+    color: #111;
 }
 
-/* SIMU */
-@media (max-width: 600px) {
-    nav {
-        display: flex !important;
-        flex-direction: row;
-        flex-wrap: wrap;
+
+/* ================================
+   TABLET
+================================ */
+
+@media screen and (max-width: 900px) {
+
+    .navbar {
+        padding: 0 3%;
+    }
+
+    .navbar ul {
         justify-content: center;
-        align-items: center;
-        gap: 4px;
-        width: 100%;
-        margin-top: 10px;
+        flex-wrap: wrap;
     }
 
-    nav a {
-        display: inline-block;
-        font-size: 13px;
-        padding: 7px 6px;
+    .navbar li a {
+        font-size: 14px;
+        padding: 12px 8px;
+    }
+}
+
+
+/* ================================
+   PHONE
+================================ */
+
+@media screen and (max-width: 600px) {
+
+    .navbar {
+        display: block !important;
+        width: 100%;
+        padding: 5px 5px;
+        background: #022c22;
+    }
+
+    .navbar ul {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        gap: 2px;
+    }
+
+    .navbar li {
+        display: block !important;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar li a {
+        display: block !important;
+        color: white !important;
+        font-size: 12px;
+        padding: 8px 6px;
         white-space: nowrap;
     }
+
+    .navbar li a:hover,
+    .navbar li a.active {
+        background: #f59e0b;
+        color: #111 !important;
+    }
 }
-   
